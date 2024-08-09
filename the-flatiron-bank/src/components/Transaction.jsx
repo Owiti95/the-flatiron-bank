@@ -13,11 +13,25 @@ const Transaction = ({Transactions,searchText}) => {
                     <th>Date</th>
                 </tr>
             </thead>
+            {transactions
+            .filter((transaction) =>
+            searchText === '' || transaction.description.toLowerCase().includes(searchText.toLowerCase())
+        ) 
+        
+            .map(transaction=> <TransactionItems
+            
+            key={transaction.id}
+                description={transaction.description}
+                category={transaction.category}
+                amount={transaction.amount}
+                date={transaction.date}
+            />
+            
+            )}
 
-            {/*mapping */}
         </table>
     </div>
   )
 }
 
-export default Transaction
+export default Transaction;
