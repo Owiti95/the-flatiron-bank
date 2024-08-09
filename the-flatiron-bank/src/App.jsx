@@ -13,7 +13,7 @@ const App = () => {
   }
   
     useEffect(() =>{
-      fetch('https://flatiron-bank-eight.vercel.app/transactions')
+      fetch('')
       .then(res =>res.json())
       .then(transaction =>setTransactions(transaction)
       )
@@ -35,4 +35,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;
