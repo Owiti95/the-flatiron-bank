@@ -21,8 +21,8 @@ const App = () => {
 
   return (
     <div >
-    <div className=' flex justify-evenly p-4 '>
-    <h1>The Bank Of Flatiron</h1>
+    <div className=' bg-neutral-950 mb-4 flex justify-evenly p-4 rounded-md'>
+    <h1 className='text-white'>The Bank Of Flatiron</h1>
     <SearchBar onSearch={handleSearch}/>
     </div>
     <div >

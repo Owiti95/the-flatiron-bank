@@ -3,7 +3,7 @@ import TransactionItems from './TransactionItems'
 
 const Transaction = ({transactions,searchText}) => {
   return (
-    <div>
+    <div className='bg-yellow-700 rounded-lg p-4'>
         <table>
             <thead>
                 <tr>
