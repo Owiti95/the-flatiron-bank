@@ -1,7 +1,7 @@
 import React from 'react'
 import TransactionItems from './TransactionItems'
 
-const Transaction = ({Transactions,searchText}) => {
+const Transaction = ({transactions,searchText}) => {
   return (
     <div>
         <table>

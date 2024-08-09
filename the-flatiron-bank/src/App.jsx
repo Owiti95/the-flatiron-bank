@@ -13,7 +13,7 @@ const App = () => {
   }
   
     useEffect(() =>{
-      fetch('')
+      fetch('http://localhost:3000/transactions')
       .then(res =>res.json())
       .then(transaction =>setTransactions(transaction)
       )
@@ -21,11 +21,11 @@ const App = () => {
 
   return (
     <div >
-    <div className=' flex justify-evenly items-center shadow-lg p-4 m-2'>
-    <h1 className=' font-bold text-2xl text-orange-500 '>The Bank Of Flatiron</h1>
+    <div className=' flex justify-evenly p-4 '>
+    <h1>The Bank Of Flatiron</h1>
     <SearchBar onSearch={handleSearch}/>
     </div>
-    <div className=' flex justify-evenly items-center' >
+    <div >
    
     <Transaction 
     transactions={transactions} searchText={searchText} />
