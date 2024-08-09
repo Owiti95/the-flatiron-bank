@@ -1,7 +1,40 @@
 import React, {useState} from 'react'
 
 const TransactionForm = ({transactions, setTransactions}) => {
-  return (
+  const [formData, setFormData] = useState({
+    description: '',
+    category: '',
+    amount: '',
+    date: '',
+  });
+
+  const handleChange = (e) => {
+    const {name, value} = e.target;
+    setFormData({...formData, [name]: value});
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    fetch('', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+    })
+    .then((response) => response.json())
+    .then((transaction) => {
+        setTransactions([transaction, ...transactions]);
+
+        setFormData({description: '', category: '', amount: '', date: ''});
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+    };
+
+    return (
     <div>
         <form>
             <div>
