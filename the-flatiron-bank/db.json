@@ -127,6 +127,13 @@
       "category": "Transportation",
       "amount": "20",
       "date": "2024-08-09"
+    },
+    {
+      "id": "bf39",
+      "description": "Uber ride",
+      "category": "Chipotle",
+      "amount": "25",
+      "date": "2024-08-09"
     }
   ]
 }

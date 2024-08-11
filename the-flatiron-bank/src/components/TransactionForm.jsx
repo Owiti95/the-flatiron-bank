@@ -19,7 +19,7 @@ const TransactionForm = ({ transactions, setTransactions }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        fetch('http://localhost:3000/transactions', {
+        fetch('https://api.jsonbin.io/v3/b/66b905cead19ca34f894b06b', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
